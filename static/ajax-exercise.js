@@ -2,10 +2,15 @@
 
 
 // PART 1: SHOW A FORTUNE
+function getFortune(results) {
+    $('#fortune-text').html(results);
+}
+
 
 function showFortune(evt) {
 
-    // TODO: get the fortune and show it in the #fortune-text div
+    // TODO: get the fortune and show it in the #fortune-text div\
+    $.get("/fortune", getFortune);
 }
 
 $('#get-fortune-button').on('click', showFortune);
