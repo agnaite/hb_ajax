@@ -49,7 +49,6 @@ function confirmOrder(results) {
 
 }
 
-
 function orderMelons(evt) {
     evt.preventDefault();
 
@@ -60,7 +59,7 @@ function orderMelons(evt) {
         "melon_type": $("#melon-type-field").val()
     };
 
-    $.post('/order-melons.json', formInputs, confirmOrder)
+    $.post('/order-melons.json', formInputs, confirmOrder);
 }
 
 $("#order-form").on('submit', orderMelons);
